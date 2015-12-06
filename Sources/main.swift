@@ -24,6 +24,10 @@
 
 import swiftra
 
+#if os(Linux)
+    import Glibc
+#endif
+
 get("/abc") { req in
     return Response("/abc was requested with GET")
 }
