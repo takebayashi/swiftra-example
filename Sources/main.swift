@@ -22,6 +22,7 @@
  SOFTWARE.
 */
 
+import Foundation
 import swiftra
 
 #if os(Linux)
@@ -40,4 +41,5 @@ get("/def") { req in
     return "/def was was requested with GET"
 }
 
-serve(8080)
+let port = NSProcessInfo.processInfo().environment["PORT"].flatMap { UInt16($0) }
+serve(port ?? 8080)
