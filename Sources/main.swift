@@ -34,7 +34,7 @@ get("/abc") { req in
 }
 
 post("/abc") { req in
-    return "/abc was requested with POST, body = \(String(req.bodyString))"
+    return "/abc was requested with POST, body = \(String(req.body))"
 }
 
 get("/def") { req in
