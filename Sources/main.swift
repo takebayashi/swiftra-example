@@ -30,7 +30,7 @@ import swiftra
 #endif
 
 get("/") { req in
-    return Response("<h1>Hello, world!</h1>")
+    return Response(status: .OK, headers: [("Content-Type", "text/html")], body: "<h1>Hello, world!</h1>")
 }
 
 get("/abc") { req in
