@@ -29,6 +29,10 @@ import swiftra
     import Glibc
 #endif
 
+get("/") { req in
+    return Response("<h1>Hello, world!</h1>")
+}
+
 get("/abc") { req in
     return Response("/abc was requested with GET")
 }
